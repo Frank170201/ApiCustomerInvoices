@@ -18,7 +18,7 @@ class InvoiceController extends Controller
     public function index()
     {
         //
-        return new InvoiceCollection(Invoice::paginate(10));
+        return new InvoiceCollection(Invoice::paginate());
     }
 
     /**
