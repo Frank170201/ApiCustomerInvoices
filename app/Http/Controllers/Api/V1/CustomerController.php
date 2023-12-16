@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Models\Customer;
-use GuzzleHttp\Psr7\Request;
+use Illuminate\Http\Request;
 use App\Services\V1\CustomerQuery;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCustomerRequest;
@@ -25,7 +25,6 @@ class CustomerController extends Controller
         }else{
             return new CustomerCollection(Customer::where($queryItems)->paginate());
         }
-        
     }
 
     /**
